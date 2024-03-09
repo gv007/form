@@ -10,7 +10,7 @@
 <meta property="og:image" content="https://github.com/gv007/form.github.io/blob/main/logo.png?raw=true">
 <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
-<body>
+<body class="bg-body-secondary">
     <div class="container">
         <img src="logo.png" class="d-flex mx-auto" style="width: 150px;" alt="SMP Gunungjati 2">
         <p class="text-center fw-semibold mt-0 mb-4"><a href="https://www.smpgunungjati2.sch.id/" target="_blank" style="text-decoration: none;">smpgunungjati2.sch.id</a></p>
@@ -35,19 +35,24 @@
             </div>
             <div class="mb-3">
                 <label for="sekolahAsal" class="form-label fw-semibold">Sekolah Asal</label>
-                <input type="text" class="form-control" id="sekolahAsal" name="sekolahAsal" required placeholder="Masukkan nama sekolah">
+                <input type="text" class="form-control" id="sekolahAsal" name="sekolahAsal" required placeholder="Contoh: SD/MI Purwokerto">
             </div>
             <div class="mb-3">
                 <label for="namaOrangTua" class="form-label fw-semibold">Nama Orang Tua/Wali</label>
-                <input type="text" class="form-control" id="namaOrangTua" name="namaOrangTua" required placeholder="Masukkan nama orang tua/wali">
+                <input type="text" class="form-control" id="namaOrangTua" name="namaOrangTua" required placeholder="Masukkan nama lengkap orang tua/wali">
             </div>
             <div class="mb-3">
-                <label for="noTelpOrangTua" class="form-label fw-semibold">No. WA Orang Tua/Wali</label>
-                <input type="tel" class="form-control" id="noTelpOrangTua" name="noTelpOrangTua" required placeholder="Masukkan nomor WA orang tua/wali">
+                <label for="noWaOrangTua" class="form-label fw-semibold">No. WhatsApp Orang Tua/Wali</label>
+                <input type="tel" class="form-control" id="noWaOrangTua" name="noWaOrangTua" required placeholder="Contoh: 0812 3456 7890">
             </div>
+            <div class="mb-3">
+                <label for="alamatOrangTua" class="form-label fw-semibold">Alamat Lengkap Orang Tua/Wali</label>
+                <textarea class="form-control" id="alamatOrangTua" name="alamatOrangTua" required placeholder="Contoh: Jl. Mayjen Sutoyo Gang 2, Kelurahan Kedungwuluh, Kecamatan Purwokerto Barat, Kabupaten Banyumas." style="resize: vertical; height: 200px;"></textarea>
+            </div>
+                       
             <div class="mb-3">
                 <label for="emailOrangTua" class="form-label fw-semibold">Email Orang Tua/Wali</label>
-                <input type="email" class="form-control" id="emailOrangTua" name="emailOrangTua" required placeholder="Alamat email orang tua/wali">
+                <input type="email" class="form-control" id="emailOrangTua" name="emailOrangTua" required placeholder="Contoh: namaorangtua@gmail.com">
             </div>
             <button type="button" onclick="sendWhatsAppMessage()" class="btn btn-success mt-3"><i class="fab fa-whatsapp"></i> Kirim Formulir</button>
         </form>
@@ -62,7 +67,7 @@
         </div>
    </footer>
     
-   <script>function sendWhatsAppMessage(){var e=document.getElementById("nama").value,t=document.getElementById("jenisKelamin").value,n=document.getElementById("tempatTanggalLahir").value,a=document.getElementById("sekolahAsal").value,s=document.getElementById("namaOrangTua").value,o=document.getElementById("noTelpOrangTua").value,l=document.getElementById("emailOrangTua").value,i="6285747099154",r="Nama Lengkap: "+e+"\nJenis Kelamin: "+t+"\nTempat dan Tanggal Lahir: "+n+"\nSekolah Asal: "+a+"\nNama Orang Tua/Wali: "+s+"\nNo. Telp Orang Tua/Wali: "+o+"\nEmail Orang Tua/Wali: "+l,c="https://wa.me/"+i+"?text="+encodeURIComponent(r);window.location.href=c}</script>
+   <script>function sendWhatsAppMessage(){var a=document.getElementById("nama").value,e=document.getElementById("jenisKelamin").value,n=document.getElementById("tempatTanggalLahir").value,t=document.getElementById("sekolahAsal").value,l=document.getElementById("namaOrangTua").value,m=document.getElementById("noWaOrangTua").value,u=document.getElementById("alamatOrangTua").value,g=document.getElementById("emailOrangTua").value,d="https://wa.me/6285747099154?text="+encodeURIComponent("Nama: "+a+"\n\nJenis Kelamin: "+e+"\n\nTempat dan Tanggal Lahir: "+n+"\n\nSekolah Asal: "+t+"\n\nNama Orang Tua/Wali: "+l+"\n\nNo. WA Orang Tua/Wali: "+m+"\n\nAlamat Orang Tua/Wali: "+u+"\n\nEmail Orang Tua/Wali: "+g);window.location.href=d}</script>
     
 </body>
 </html>
